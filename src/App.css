@@ -170,6 +170,9 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding-top: 68px;
 }
 
 #home h1{
