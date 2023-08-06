@@ -26,5 +26,12 @@ export const myCirtifications = [
         images: '/hackathon.jpg',
         width: '575px',
         height: '400px',
+    },
+    {
+        id: 'five',
+        title: 'Islam Turky - Back End Development and APIs Certification.png',
+        images: '/Islam Turky - Back End Development and APIs Certification.png',
+        width: '575px',
+        height: '400px'
     }
 ];
