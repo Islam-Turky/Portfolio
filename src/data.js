@@ -30,7 +30,7 @@ export const myCirtifications = [
     {
         id: 'five',
         title: 'Islam Turky - Back End Development and APIs Certification.png',
-        images: '/Islam Turky - Back End Development and APIs Certification.png',
+        images: 'https://github.com/Islam-Turky/portfolio/blob/240235f76beae044353673b3e31e86376fff61a8/public/Islam%20Turky%20-%20Back%20End%20Development%20and%20APIs%20Certification.png',
         width: '575px',
         height: '400px'
     }
