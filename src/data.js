@@ -30,7 +30,7 @@ export const myCirtifications = [
     {
         id: 'five',
         title: 'Back End Development and APIs Certification',
-        images: 'public/backendAndApis.png',
+        images: '/backendAndApis.png',
         width: '900px',
         height: '710px'
     }
