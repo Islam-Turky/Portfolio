@@ -33,5 +33,12 @@ export const myCirtifications = [
         images: '/backendAndApis.png',
         width: '900px',
         height: '710px'
+    },
+    {
+        id: 'six',
+        title: 'JavaScript Algorithms and Data Structures Certification',
+        images: '/JavaScriptAlgorithmsandDataStructuresCertification.png',
+        width: '900px',
+        height: '710px'
     }
 ];
