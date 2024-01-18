@@ -1,8 +1,18 @@
 import { useEffect, useState } from 'react';
 import Footer from '../components/Footer'
-import { FaReact, FaJs, FaPython, FaNodeJs, FaCircleChevronLeft, FaCircleChevronRight} from "react-icons/fa6";
+import { FaReact, FaJs, FaPython, FaNodeJs} from "react-icons/fa6";
 import { myCirtifications } from '../data';
 import AboutNavbar from '../components/AboutNavbar';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+
+import './style.css';
+
+// import required modules
+import { EffectCards } from 'swiper/modules';
+import Contact from './Contact';
 
 const data = myCirtifications;
 const Github = 'https://api.github.com/users/Islam-Turky/repos';
@@ -26,24 +36,6 @@ const About = () => {
     }
     fetchAccount();
     },[])
-    const cirt = document.getElementById('cirt');
-    const nextbtn = document.getElementById('nextvbtn');
-    const prevtbtn = document.getElementById('prevbtn');
-    if(cirt){
-        cirt.addEventListener('wheel', (eve) => {
-            eve.preventDefault();
-            cirt.scrollLeft += eve.deltaY;
-            cirt.style.scrollBehavior = 'smooth';
-        })
-
-        nextbtn.addEventListener('click',() => {
-            cirt.scrollLeft += 400;
-        });
-
-        prevtbtn.addEventListener('click',() => {
-            cirt.scrollLeft -= 400;
-        });
-    }
     // retuen my About page.
     return (
     <>
@@ -95,50 +87,24 @@ const About = () => {
                 </div>
             </div>
             {/* Cirtifications */}
-            <div id="cirtifications" className='secti'>
-                <h1>Cirtifications</h1>
-                <div id='container'>
-                    <i className='iconarrow' id='prevbtn'><FaCircleChevronLeft /></i>
-                    <div id="cirt">
+                <h1 id='certificarion-head-text'>Cirtifications</h1>
+                <div id="cirt">
+                    <Swiper
+                    effect={'cards'}
+                    grabCursor={true}
+                    modules={[EffectCards]}
+                    className="mySwiper">
                         {data.map((item) => {
-                            const {title, id, images, width, height} = item;
+                            const {id, images} = item;
                             return (
-                                <div key={id} className='cart' id={id}>
-                                    <p>{title}</p>
-                                    <div
-                                        id='cirtphoto'
-                                    style=  {{ 
-                                                background: `url(${images}) no-repeat`,
-                                                width: `${width}` ,
-                                                height: `${height}`
-                                            }}
-                                    >
-
-                                    </div>
-                                </div>
+                                    <SwiperSlide key={id}>
+                                        <img key={id} src={`${images}`} alt='certificate'/>
+                                    </SwiperSlide>
                             )
                         })}
-                    </div>
-                    <i className='iconarrow' id='nextvbtn'><FaCircleChevronRight /></i>
+                    </Swiper>
                 </div>
-            </div>
-            {/* projects */}
-            <div id='projects' className='secti'>
-                <h1>Projects</h1>
-                {repo.map((rep) => {
-                    const { name, id, fork, html_url } = rep;
-                    if (!fork && name !== "skillCreator" 
-                    && name !== "store" 
-                    && name !== "Islam-Turky" 
-                    && name !== "islam-torky.github.io"
-                    ) {
-                    return(
-                    <div key={id} id='linksforproject'>
-                        <a href={html_url} target='blank'className='linksproject'>{name}</a>
-                    </div>
-                    )}
-                })}
-            </div>
+            <Contact />
         </section>
         <Footer />
     </>

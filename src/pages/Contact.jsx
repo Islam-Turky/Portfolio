@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import { useRef } from "react";
 import emailjs from '@emailjs/browser';
 
@@ -40,7 +39,7 @@ return (
                 </div>
             </form>
         </section>
-        <Footer />
+        {/* <Footer /> */}
     </>
 )
 }
