@@ -42,7 +42,7 @@ const Navbar = () => {
             </header>
             <div id="side_bar" className={sidebar ? "showsidebar" : "hideSidebar"}>
                 <div id="links_sidebar">
-                    <Link to="/Rsources" className="sidelink">Rsources</Link>
+                    <Link to="/Resources" className="sidelink">Rsources</Link>
                     <Link to="/Projects" className="sidelink">Work</Link>
                     <Link to="/Blog" className="sidelink">Blog</Link>
                     <Link to="/Learn" className="sidelink">Learn</Link>
