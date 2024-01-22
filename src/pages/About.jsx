@@ -1,45 +1,24 @@
-import { useEffect, useState } from 'react';
 import Footer from '../components/Footer'
 import { FaReact, FaJs, FaPython, FaNodeJs} from "react-icons/fa6";
 import { myCirtifications } from '../data';
-import AboutNavbar from '../components/AboutNavbar';
+// import AboutNavbar from '../components/AboutNavbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-
 import './style.css';
-
 // import required modules
 import { EffectCards } from 'swiper/modules';
-import Contact from './Contact';
+// import Contact from './Contact';
 
 const data = myCirtifications;
-const Github = 'https://api.github.com/users/Islam-Turky/repos';
 
 const About = () => {
     // make page title
     document.title = "ABOUT";
-    // create state repo.
-    const [repo, setRepo] = useState([]);
-    // const [repos, setRepo] = useState([]);
-    // fetch my github profile.
-    useEffect(() => {
-        const fetchAccount = async () => {
-        try {
-            const response = await fetch(Github);
-            const myRepo = await response.json();
-            setRepo(myRepo);
-        }catch (err) {
-            console.log(err);
-        }
-    }
-    fetchAccount();
-    },[])
     // retuen my About page.
     return (
     <>
-        <AboutNavbar />
+        {/* <AboutNavbar /> */}
         <section id='about'>
             {/* cv */}
             <div id='cv' className='secti'>
@@ -104,7 +83,7 @@ const About = () => {
                         })}
                     </Swiper>
                 </div>
-            <Contact />
+            {/* <Contact /> */}
         </section>
         <Footer />
     </>
