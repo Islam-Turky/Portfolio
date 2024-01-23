@@ -21,25 +21,28 @@ const Projects = () => {
             <div id='projects'>
                 <div id='container'>
                     <div className='title'>
-                        <h1>Projects</h1>
+                        <h1>WORK</h1>
                         <p>Let me show you</p>
                     </div>
+                    <h2>GITHUB</h2>
                     <div className='works'>
-                {repo.map((rep) => {
-                    const { name, id, fork, html_url } = rep;
-                    if (!fork && name !== "skillCreator" 
-                    && name !== "store" 
-                    && name !== "Islam-Turky" 
-                    && name !== "islam-torky.github.io"
-                    ) {
-                        return(
-                    <div key={id} className='linksforproject'>
-                        <div className="namew">{name}</div>
-                        <div className="logo"><FaGithub /></div>
-                        <a href={html_url} target='blank'>github</a>
-                    </div>
-                    )}
-                })}
+                    {repo.map((rep) => {
+                        const { name, id, fork, html_url } = rep;
+                        if (!fork && name !== "skillCreator" 
+                        && name !== "store" 
+                        && name !== "Islam-Turky" 
+                        && name !== "islam-torky.github.io"
+                        ) {
+                            return(
+                        <div key={id} className='linksforproject'>
+                            <div className="logo"><FaGithub /></div>
+                            <div className='desc'>
+                                <div className="namew">{name}</div>
+                                <a href={html_url} target='blank'>github</a>
+                            </div>
+                        </div>
+                        )}
+                    })}
                 </div>
             </div>
         </div>

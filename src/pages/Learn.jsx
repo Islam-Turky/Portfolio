@@ -1,6 +1,6 @@
 const Learn = () => {
     return(
-        <div>Learn</div>
+        <div id="learn">Will Publish Soon</div>
     )
 };
 

@@ -23,11 +23,11 @@ const Home = () => {
                 <h1 className="d">DEVELOPER</h1>
             </div>
             <div className="profile">
-                <div className="innerimg">
+                {/* <div className="innerimg"> */}
                     <img src="/download.png" alt="f" style={{
                         transform: `translate(${mousePosition.x /150}px, ${mousePosition.y /150}px)`,
                     }}/>
-                </div>
+                {/* </div> */}
             </div>
         </section>
     );
