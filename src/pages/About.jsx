@@ -1,14 +1,12 @@
 import Footer from '../components/Footer'
 import { FaReact, FaJs, FaPython, FaNodeJs} from "react-icons/fa6";
 import { myCirtifications } from '../data';
-// import AboutNavbar from '../components/AboutNavbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import './style.css';
 // import required modules
 import { EffectCards } from 'swiper/modules';
-// import Contact from './Contact';
 
 const data = myCirtifications;
 

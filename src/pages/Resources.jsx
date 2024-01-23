@@ -169,7 +169,7 @@ const Resources = () => {
                         <div className="shape"><img src="/monitor.jpg" alt="monitor" /></div>
                         <div className="description">
                             <div>
-                                <h1>HP Monitor</h1>
+                                <h1>DELL Monitor</h1>
                                 <p>Usually I Used This Monitor</p>
                             </div>
                         </div>

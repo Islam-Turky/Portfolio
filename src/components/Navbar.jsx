@@ -7,7 +7,7 @@ import Resources from "../pages/Resources";
 import Blog from "../pages/Blog";
 import Learn from "../pages/Learn";
 import Contact from "../pages/Contact";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineClose} from "react-icons/ai";
 
 const Navbar = () => {
@@ -15,7 +15,13 @@ const Navbar = () => {
     const showSidebar = () => {
         return setSideBar(!sidebar)
     };
-
+    useEffect(() => {
+        if(sidebar){
+            document.body.style.overflow = "hidden";
+        }else{
+            document.body.style.overflow = "visible";
+        }
+    }, [sidebar])
     return (
         <BrowserRouter>
             <header>

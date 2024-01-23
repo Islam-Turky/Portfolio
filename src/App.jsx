@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
 import Navbar from './components/Navbar';
+
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
